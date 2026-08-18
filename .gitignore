@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+*.swp
+*~
+
+# Xcode
+build/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM
+*.dSYM.zip
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Certificates and provisioning profiles - NEVER commit these
+*.p12
+*.mobileprovision
+*.cer
+*.crt
+*.pem
+*.key
+certificate_base64.txt
+profile_base64.txt
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
