@@ -20,13 +20,13 @@ jobs:
         run: xcodebuild -version
 
       - name: Check available schemes
-        run: xcodebuild -list -project BasicButtonApp.xcodeproj
+        run: xcodebuild -list -project JoyCards.xcodeproj
 
       - name: Build app without code signing
         run: |
           xcodebuild build \
-            -project BasicButtonApp.xcodeproj \
-            -scheme BasicButtonApp \
+            -project JoyCards.xcodeproj \
+            -scheme JoyCards \
             -configuration Release \
             -sdk iphoneos \
             -derivedDataPath build/DerivedData \
@@ -35,7 +35,7 @@ jobs:
 
       - name: Package unsigned IPA
         run: |
-          APP_DIR="build/DerivedData/Build/Products/Release-iphoneos/BasicButtonApp.app"
+          APP_DIR="build/DerivedData/Build/Products/Release-iphoneos/JoyCards.app"
           if [ ! -d "$APP_DIR" ]; then
             echo "ERROR: App bundle not found at $APP_DIR"
             exit 1
@@ -43,7 +43,7 @@ jobs:
           mkdir -p build/ipa/Payload
           cp -R "$APP_DIR" build/ipa/Payload/
           cd build/ipa
-          zip -r BasicButtonApp-unsigned.ipa Payload
+          zip -r JoyCards-unsigned.ipa Payload
           rm -rf Payload
 
       - name: List IPA output
@@ -52,6 +52,6 @@ jobs:
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
-          name: BasicButtonApp-Unsigned-IPA
-          path: build/ipa/BasicButtonApp-unsigned.ipa
+          name: JoyCards-Unsigned-IPA
+          path: build/ipa/JoyCards-unsigned.ipa
           if-no-files-found: error

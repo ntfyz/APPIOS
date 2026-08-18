@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Device Check</string>
+	<string>Joy Cards</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -22,6 +22,12 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Joy Cards uses the camera to capture the moments you want to remember.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Joy Cards can add the location where a moment happened to your memory cards.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Joy Cards lets you choose a photo from your library for a memory card.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

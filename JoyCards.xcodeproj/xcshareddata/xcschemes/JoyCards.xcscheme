@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA0000000000000000000041"
-               BuildableName = "BasicButtonApp.app"
-               BlueprintName = "BasicButtonApp"
-               ReferencedContainer = "container:BasicButtonApp.xcodeproj">
+               BlueprintIdentifier = "AA0000000000000000000080"
+               BuildableName = "JoyCards.app"
+               BlueprintName = "JoyCards"
+               ReferencedContainer = "container:JoyCards.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,10 +44,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA0000000000000000000041"
-            BuildableName = "BasicButtonApp.app"
-            BlueprintName = "BasicButtonApp"
-            ReferencedContainer = "container:BasicButtonApp.xcodeproj">
+            BlueprintIdentifier = "AA0000000000000000000080"
+            BuildableName = "JoyCards.app"
+            BlueprintName = "JoyCards"
+            ReferencedContainer = "container:JoyCards.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,10 +61,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA0000000000000000000041"
-            BuildableName = "BasicButtonApp.app"
-            BlueprintName = "BasicButtonApp"
-            ReferencedContainer = "container:BasicButtonApp.xcodeproj">
+            BlueprintIdentifier = "AA0000000000000000000080"
+            BuildableName = "JoyCards.app"
+            BlueprintName = "JoyCards"
+            ReferencedContainer = "container:JoyCards.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
