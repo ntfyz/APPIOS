@@ -10,6 +10,10 @@
 		AA0000000000000000000011 /* BasicButtonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000002 /* BasicButtonApp.swift */; };
 		AA0000000000000000000012 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000003 /* ContentView.swift */; };
 		AA0000000000000000000013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000004 /* Assets.xcassets */; };
+		AA0000000000000000000014 /* DeviceInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000006 /* DeviceInfoManager.swift */; };
+		AA0000000000000000000015 /* InfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000007 /* InfoRow.swift */; };
+		AA0000000000000000000016 /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000008 /* InfoCard.swift */; };
+		AA0000000000000000000017 /* ProgressInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000009 /* ProgressInfoCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +22,10 @@
 		AA0000000000000000000003 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA0000000000000000000004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA0000000000000000000005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA0000000000000000000006 /* DeviceInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoManager.swift; sourceTree = "<group>"; };
+		AA0000000000000000000007 /* InfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRow.swift; sourceTree = "<group>"; };
+		AA0000000000000000000008 /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
+		AA0000000000000000000009 /* ProgressInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressInfoCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,10 +52,22 @@
 			children = (
 				AA0000000000000000000002 /* BasicButtonApp.swift */,
 				AA0000000000000000000003 /* ContentView.swift */,
+				AA0000000000000000000006 /* DeviceInfoManager.swift */,
+				AA0000000000000000000024 /* Views */,
 				AA0000000000000000000004 /* Assets.xcassets */,
 				AA0000000000000000000005 /* Info.plist */,
 			);
 			path = BasicButtonApp;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000024 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000007 /* InfoRow.swift */,
+				AA0000000000000000000008 /* InfoCard.swift */,
+				AA0000000000000000000009 /* ProgressInfoCard.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		AA0000000000000000000023 /* Products */ = {
@@ -129,6 +149,10 @@
 			files = (
 				AA0000000000000000000011 /* BasicButtonApp.swift in Sources */,
 				AA0000000000000000000012 /* ContentView.swift in Sources */,
+				AA0000000000000000000014 /* DeviceInfoManager.swift in Sources */,
+				AA0000000000000000000015 /* InfoRow.swift in Sources */,
+				AA0000000000000000000016 /* InfoCard.swift in Sources */,
+				AA0000000000000000000017 /* ProgressInfoCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
