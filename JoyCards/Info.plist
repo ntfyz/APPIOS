@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Joy Cards</string>
+	<string>Check Giờ Meme</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -23,11 +23,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Joy Cards uses the camera to capture the moments you want to remember.</string>
+	<string>Check Giờ Meme uses the camera only when you choose to create content.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Joy Cards can add the location where a moment happened to your memory cards.</string>
+	<string>Check Giờ Meme can add location when you choose to create content.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Joy Cards lets you choose a photo from your library for a memory card.</string>
+	<string>Check Giờ Meme lets you choose photos when you create content.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

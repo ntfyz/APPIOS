@@ -1,13 +1,13 @@
 import SwiftUI
-import SwiftData
+import UIKit
 
 struct HomeView: View {
     @AppStorage("todayCheckCount") private var checkCount: Int = 0
     @AppStorage("selectedTheme") private var selectedThemeRaw: String = ClockTheme.neonCyber.rawValue
     @State private var currentMeme: TimeMeme?
     @State private var showThemePicker: Bool = false
-    @State private var showShareSheet: Bool = false
     @State private var showAllPeriodsSheet: Bool = false
+    @State private var creatorMode: Bool = false
 
     private var currentTheme: ClockTheme {
         ClockTheme(rawValue: selectedThemeRaw) ?? .neonCyber
@@ -21,8 +21,9 @@ struct HomeView: View {
             NavigationStack {
                 ScrollView {
                     VStack(spacing: 22) {
-                        // Header bar
                         topBar
+
+                        creatorModeToggle
 
                         // Live Big Clock
                         LiveClockView(currentDate: date, theme: currentTheme)
@@ -73,11 +74,11 @@ struct HomeView: View {
     private var topBar: some View {
         HStack {
             VStack(alignment: .leading, spacing: 2) {
-                Text("MEME CHECK GIỜ ⏰")
+                Text("GIỜ NÀY LÀM GÌ? ⏰")
                     .font(.caption.weight(.black))
                     .foregroundColor(currentTheme.primaryColor)
                     .tracking(1.5)
-                Text("Hôm nay bạn thế nào?")
+                Text("Đồng hồ meme cho content của bạn")
                     .font(.title2.weight(.bold))
                     .foregroundColor(.white)
             }
@@ -96,6 +97,29 @@ struct HomeView: View {
             }
             .buttonStyle(.plain)
         }
+    }
+
+    private var creatorModeToggle: some View {
+        HStack(spacing: 12) {
+            Image(systemName: creatorMode ? "record.circle.fill" : "sparkles")
+                .font(.title3)
+                .foregroundColor(creatorMode ? .red : currentTheme.primaryColor)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(creatorMode ? "MODE QUAY CONTENT" : "MODE CHECK GIỜ")
+                    .font(.caption.weight(.black))
+                    .foregroundColor(.white)
+                    .tracking(0.8)
+                Text(creatorMode ? "Mở quay màn hình và bấm Đổi meme" : "Bật mode quay để có nhịp content")
+                    .font(.caption2)
+                    .foregroundColor(.secondary)
+            }
+            Spacer()
+            Toggle("Creator mode", isOn: $creatorMode)
+                .labelsHidden()
+                .tint(.red)
+        }
+        .padding(14)
+        .background(Color.white.opacity(0.07), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
     }
 
     // MARK: - Quick Action Buttons
@@ -119,11 +143,11 @@ struct HomeView: View {
 
             Button {
                 Haptics.light()
-                shareTimeStatus()
+                shareMemeCard()
             } label: {
                 HStack {
                     Image(systemName: "square.and.arrow.up")
-                    Text("Chia Sẻ Meme")
+                    Text("Xuất Ảnh Story")
                 }
                 .font(.subheadline.weight(.semibold))
                 .foregroundColor(.white)
@@ -185,20 +209,13 @@ struct HomeView: View {
         }
     }
 
-    private func shareTimeStatus() {
+    private func shareMemeCard() {
         guard let meme = currentMeme else { return }
-        let timeFormatter = DateFormatter()
-        timeFormatter.dateFormat = "HH:mm"
-        let timeString = timeFormatter.string(from: Date())
-
-        let shareText = """
-        ⏰ Bây giờ là \(timeString) [\(meme.period.title)]
-        \(meme.emoji) \(meme.statusText)
-        "\(meme.roastText)"
-        👉 \(meme.tag)
-        """
-
-        let av = UIActivityViewController(activityItems: [shareText], applicationActivities: nil)
+        let renderer = ImageRenderer(content: StoryMemeCard(date: Date(), meme: meme, theme: currentTheme))
+        renderer.scale = 3
+        guard let image = renderer.uiImage else { return }
+        let caption = "\(meme.emoji) \(meme.statusText)\n\"\(meme.roastText)\"\n\(meme.tag)"
+        let av = UIActivityViewController(activityItems: [image, caption], applicationActivities: nil)
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let rootVC = windowScene.windows.first?.rootViewController {
             rootVC.present(av, animated: true, completion: nil)
@@ -280,5 +297,53 @@ struct HomeView: View {
                 }
             }
         }
+    }
+}
+
+private struct StoryMemeCard: View {
+    let date: Date
+    let meme: TimeMeme
+    let theme: ClockTheme
+
+    private var time: String {
+        date.formatted(date: .omitted, time: .shortened)
+    }
+
+    var body: some View {
+        ZStack {
+            LinearGradient(colors: theme.accentGradients, startPoint: .topLeading, endPoint: .bottomTrailing)
+            VStack(alignment: .leading, spacing: 28) {
+                Text("GIỜ NÀY LÀM GÌ? ⏰")
+                    .font(.system(size: 16, weight: .black))
+                    .tracking(2)
+                    .foregroundColor(theme.primaryColor)
+                Spacer()
+                Text(time)
+                    .font(.system(size: 78, weight: .black, design: .rounded))
+                    .foregroundColor(.white)
+                Text(meme.period.title.uppercased())
+                    .font(.system(size: 14, weight: .bold))
+                    .foregroundColor(theme.primaryColor)
+                Text(meme.emoji)
+                    .font(.system(size: 100))
+                Text(meme.statusText)
+                    .font(.system(size: 34, weight: .black, design: .rounded))
+                    .foregroundColor(.white)
+                Text("“\(meme.roastText)”")
+                    .font(.system(size: 20, weight: .medium, design: .rounded))
+                    .foregroundColor(.white.opacity(0.9))
+                    .lineSpacing(6)
+                Spacer()
+                HStack {
+                    Text(meme.tag)
+                    Spacer()
+                    Text("made with Check Giờ")
+                }
+                .font(.system(size: 13, weight: .bold))
+                .foregroundColor(theme.primaryColor)
+            }
+            .padding(34)
+        }
+        .frame(width: 360, height: 640)
     }
 }

@@ -1,4 +1,4 @@
-# Meme Check Giờ (iOS App) ⏰🔥
+# Check Giờ Meme (iOS App) ⏰🔥
 
 Ứng dụng iOS native viết bằng **Swift + SwiftUI**, đồng hồ thời gian thực siêu to, hệ thống meme và câu cà khịa (roast) phản ứng tự động theo từng khung giờ trong ngày trên iPhone.
 
@@ -26,7 +26,8 @@ Không cần: máy Mac, Hackintosh, macOS VM, Xcode trên Windows.
   - **Giờ thiêng cú đêm (01:00 - 05:00)**: Cảnh báo mắt gấu trúc, sắp gặp tổ tiên!
 - 🎲 **Nút "Check Giờ Nhanh"**: Đổi meme ngẫu nhiên theo khung giờ, kèm rung haptics giật mạnh, đếm số lần kiểm tra giờ trong ngày.
 - 🎨 **Theme Switcher**: Đổi theme màu đồng hồ (Cyberpunk Neon, Sunset Chill, Mèo Bất Lực, Cú Đêm OLED, Trà Xanh).
-- 📤 **Chia sẻ Card Meme**: Tạo status meme giờ nhanh chóng để chia sẻ lên Messenger, Story.
+- 🎬 **Mode quay content**: Giao diện tập trung, bật quay màn hình và đổi meme theo nhịp để làm Reels/TikTok.
+- 📤 **Xuất ảnh Story**: Render card dọc 9:16 gồm giờ hiện tại, caption, câu cà khịa và hashtag để đăng Story/Reels.
 
 Dữ liệu lưu **hoàn toàn trên thiết bị** (SwiftData + thư mục Documents), không backend, không đăng ký tài khoản.
 
@@ -76,6 +77,23 @@ Thông số chính:
 ---
 
 ## 1. Chạy build (từ Windows)
+
+### Cách nhanh: một cú click
+
+Chạy [build-ipa.cmd](build-ipa.cmd). Script sẽ tự `git add`, commit, push lên GitHub, chờ **Build Unsigned IPA** hoàn tất, tải artifact rồi mở thư mục chứa file `.ipa`.
+
+Lần đầu script tự cài GitHub CLI và mở phần đăng nhập GitHub. Nếu muốn chuẩn bị trước trên Windows:
+
+```powershell
+winget install --id GitHub.cli
+gh auth login
+```
+
+Muốn ghi commit message riêng:
+
+```powershell
+.\build-ipa.cmd -Message "them meme moi"
+```
 
 ### Bước 1 - Push code từ Windows
 
