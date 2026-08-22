@@ -41,6 +41,10 @@
 		AA0000000000000000000060 /* StreakCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000023 /* StreakCalculator.swift */; };
 		AA0000000000000000000061 /* UIImage+Normalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000024 /* UIImage+Normalized.swift */; };
 		AA0000000000000000000062 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000003 /* Assets.xcassets */; };
+		AA0000000000000000000063 /* TimeMemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000025 /* TimeMemeModel.swift */; };
+		AA0000000000000000000064 /* MemeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000026 /* MemeEngine.swift */; };
+		AA0000000000000000000065 /* LiveClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000027 /* LiveClockView.swift */; };
+		AA0000000000000000000066 /* MemeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000028 /* MemeCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +84,10 @@
 		AA0000000000000000000022 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		AA0000000000000000000023 /* StreakCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakCalculator.swift; sourceTree = "<group>"; };
 		AA0000000000000000000024 /* UIImage+Normalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Normalized.swift"; sourceTree = "<group>"; };
+		AA0000000000000000000025 /* TimeMemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMemeModel.swift; sourceTree = "<group>"; };
+		AA0000000000000000000026 /* MemeEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeEngine.swift; sourceTree = "<group>"; };
+		AA0000000000000000000027 /* LiveClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveClockView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000028 /* MemeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				AA0000000000000000000006 /* JoyMemory.swift */,
+				AA0000000000000000000025 /* TimeMemeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,6 +231,8 @@
 				AA000000000000000000001B /* TagChip.swift */,
 				AA000000000000000000001C /* EmptyStateView.swift */,
 				AA000000000000000000001D /* MemoryGridItem.swift */,
+				AA0000000000000000000027 /* LiveClockView.swift */,
+				AA0000000000000000000028 /* MemeCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -232,6 +243,7 @@
 				AA000000000000000000001E /* ImageStore.swift */,
 				AA000000000000000000001F /* LocationService.swift */,
 				AA0000000000000000000020 /* NotificationService.swift */,
+				AA0000000000000000000026 /* MemeEngine.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -357,6 +369,10 @@
 				AA000000000000000000005F /* ShareSheet.swift in Sources */,
 				AA0000000000000000000060 /* StreakCalculator.swift in Sources */,
 				AA0000000000000000000061 /* UIImage+Normalized.swift in Sources */,
+				AA0000000000000000000063 /* TimeMemeModel.swift in Sources */,
+				AA0000000000000000000064 /* MemeEngine.swift in Sources */,
+				AA0000000000000000000065 /* LiveClockView.swift in Sources */,
+				AA0000000000000000000066 /* MemeCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

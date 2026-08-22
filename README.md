@@ -1,33 +1,32 @@
-# Joy Cards
+# Meme Check Giờ (iOS App) ⏰🔥
 
-Ứng dụng iOS native viết bằng **Swift + SwiftUI**, build hoàn toàn tự động bằng **GitHub Actions** trên macOS runner.
+Ứng dụng iOS native viết bằng **Swift + SwiftUI**, đồng hồ thời gian thực siêu to, hệ thống meme và câu cà khịa (roast) phản ứng tự động theo từng khung giờ trong ngày trên iPhone.
 
-Bạn code trên **Windows** (VS Code), push lên GitHub, GitHub Actions chạy Xcode trên máy Mac ảo, build và trả về file `.ipa` để tải về.
+Build hoàn toàn tự động bằng **GitHub Actions** trên macOS runner trả về file `.ipa`.
 
 ```
 Windows (VS Code) --> push --> GitHub --> GitHub Actions (macOS + Xcode) --> build --> IPA --> tải từ Artifacts
 ```
 
-Không cần: máy Mac, Hackintosh, macOS VM, Xcode trên Windows, React Native, Flutter, Expo.
+Không cần: máy Mac, Hackintosh, macOS VM, Xcode trên Windows.
 
 ---
 
-## App: Joy Cards
+## Tính năng chính
 
-**Joy Cards** là một cuốn nhật ký kỷ niệm vui riêng tư. Mỗi kỷ niệm là một "card" gồm:
-
-- Ảnh chụp (máy ảnh hoặc thư viện)
-- Ghi chú ngắn (tối đa 200 ký tự)
-- Cảm xúc (mood emoji)
-- Tags (có thể thêm tag tùy chỉnh)
-- Vị trí (tên + tọa độ, hoàn toàn local)
-
-Các tính năng chính:
-
-- **Home**: thẻ kỷ niệm ngẫu nhiên, kỷ niệm "cùng ngày năm ngoái" (on this day), streak liên tục
-- **Memories**: lưới tất cả kỷ niệm, lọc theo mood / tag / tháng, xem chi tiết
-- **Recap**: tổng kết theo tháng (số kỷ niệm, mood phổ biến, tags nổi bật)
-- **Profile**: cài đặt nhắc nhở (notification lúc chọn giờ), đặt giờ recap, xóa dữ liệu
+- ⏰ **Live Big Clock**: Đồng hồ số lớn phong cách Neon Cyber / Sunset / OLED thời gian thực, cập nhật từng giây, đo % thời gian đã trôi qua trong ngày.
+- 🎭 **Meme & Roasting Engine theo 8 khung giờ**:
+  - **Sáng sớm (05:00 - 07:00)**: "Ai ép bạn dậy giờ này?"
+  - **Chiến đấu sáng (07:00 - 11:30)**: Giả vờ bận rộn, canh giờ trưa.
+  - **Giờ trưa (11:30 - 13:30)**: Ăn gì bây giờ? No bụng ngủ gật.
+  - **Chiều gật gù (13:30 - 17:00)**: 1 phút dài bằng 1 năm, ngóng 5h chiều.
+  - **Tan tầm (17:00 - 19:00)**: Kẹt xe bất lực, phóng về tự do.
+  - **Tối chill (19:00 - 22:30)**: Lướt TikTok/phim bảo xem 5 phút nhưng trôi qua 2 tiếng.
+  - **Nửa đêm (22:30 - 01:00)**: Bắt đầu suy nghĩ về cuộc đời và quá khứ.
+  - **Giờ thiêng cú đêm (01:00 - 05:00)**: Cảnh báo mắt gấu trúc, sắp gặp tổ tiên!
+- 🎲 **Nút "Check Giờ Nhanh"**: Đổi meme ngẫu nhiên theo khung giờ, kèm rung haptics giật mạnh, đếm số lần kiểm tra giờ trong ngày.
+- 🎨 **Theme Switcher**: Đổi theme màu đồng hồ (Cyberpunk Neon, Sunset Chill, Mèo Bất Lực, Cú Đêm OLED, Trà Xanh).
+- 📤 **Chia sẻ Card Meme**: Tạo status meme giờ nhanh chóng để chia sẻ lên Messenger, Story.
 
 Dữ liệu lưu **hoàn toàn trên thiết bị** (SwiftData + thư mục Documents), không backend, không đăng ký tài khoản.
 
